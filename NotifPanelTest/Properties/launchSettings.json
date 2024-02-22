@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "NotifPanelTest (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "NotifPanelTest (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

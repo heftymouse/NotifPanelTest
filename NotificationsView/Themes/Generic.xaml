@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NotificationsView">
+
+    <Style TargetType="local:NotificationsView">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:NotificationsView">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}">
+                        <ScrollView>
+                            <ItemsRepeater
+                                x:Name="TheRepeater"
+                                ItemTemplate="{TemplateBinding ItemTemplate}"
+                                ItemsSource="{TemplateBinding ItemsSource}">
+                                <ItemsRepeater.Layout>
+                                    <StackLayout Spacing="4" />
+                                </ItemsRepeater.Layout>
+                                <ItemsRepeater.ItemTransitionProvider>
+                                    <local:NotificationTransitionProvider />
+                                </ItemsRepeater.ItemTransitionProvider>
+                            </ItemsRepeater>
+                        </ScrollView>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
