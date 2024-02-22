@@ -42,7 +42,7 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NotificationsView\NotificationsView.csproj" />
+    <ProjectReference Include="..\NotificationsView\NotificationsView.WinUI.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainPage.xaml">
