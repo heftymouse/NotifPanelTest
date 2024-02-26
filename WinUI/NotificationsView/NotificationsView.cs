@@ -12,7 +12,6 @@ namespace NotificationsView
             set { SetValue(ItemsSourceProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for ItemsSource.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ItemsSourceProperty =
             DependencyProperty.Register(nameof(ItemsSource), typeof(object), typeof(NotificationsView), new PropertyMetadata(null));
 
@@ -22,12 +21,10 @@ namespace NotificationsView
             set { SetValue(ItemTemplateProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for ItemTemplate.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ItemTemplateProperty =
             DependencyProperty.Register(nameof(ItemTemplate), typeof(DataTemplate), typeof(NotificationsView), new PropertyMetadata(null));
 
         private ItemsRepeater repeater;
-
 
         public event EventHandler<object> Dismissed;
 
